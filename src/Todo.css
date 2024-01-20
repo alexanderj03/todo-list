@@ -1,0 +1,125 @@
+.todo-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.todo-icon {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-click {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 140%;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.todo-click:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.column {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-top: 50px;
+}
+
+.todo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10%;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.todo-container {
+  background-color: var(--todo-background);
+  width: 500px;
+  padding: 25px 25px;
+  border-radius: 20px;
+}
+
+.task-container {
+  background-color: var(--task-background);
+  color: var(--text-color);
+  width: 90%;
+  height: 60px;
+  padding: 0 5%;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+.task-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.loading-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 32%;
+}
+
+@media screen and (max-width: 1200px) {
+  .todo-section {
+    padding-left: 5%;
+    margin-left: 50px;
+  }
+
+  .column {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .todo-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .todo-click {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 120%;
+    font-weight: bolder;
+  }
+
+  .todo-section {
+    margin: 0;
+    padding: 0;
+  }
+}

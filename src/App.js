@@ -1,15 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import './Todo.css'
+import {
+  BrowserRouter,
+  Route,
+} from 'react-router-dom';
+import React from 'react';
+import Todo from './components/Todo';
+import Header from './components/Header';
+import { Routes } from 'react-router-dom/dist';
 
 function App() {
+
   return (
-    <div>
-      <div className='style-header'>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
+    <BrowserRouter>
+      <div className='page'>
+        <Header />
+        <br />
+        <Routes>
+          <Route path="/" element={<Todo todoType={"all"}/>} />
+          <Route path="/urgent" element={<Todo todoType={"urgent"}/>} />
+          <Route path="/finished" element={<Todo todoType={"finish"}/>} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
